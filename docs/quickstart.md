@@ -1,4 +1,4 @@
-# docsify-dark-switch
+# Quick start
 
 [![NPM](https://img.shields.io/npm/v/docsify-dark-switch.svg?style=flat-square)](https://www.npmjs.com/package/docsify-dark-switch)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/markz-demo/docsify-dark-switch/blob/main/LICENSE)
@@ -6,12 +6,11 @@
 
 > A [docsify](https://docsify.js.org) plugin which can add light and dark themes switching functionality to your docsify site.
 
-- [Documentation](https://markz-demo.github.io/docsify-dark-switch) - Demo, installation, options, and theme previews
-- [中文文档](https://markz-demo.github.io/docsify-dark-switch/#/zh/)
+[Documentation](https://markz-demo.github.io/docsify-dark-switch) - Demo, installation, options, and theme previews
 
 ## Screenshots
 
-![](docs/images/image.png)
+![](images/image.png)
 
 ## Installation
 

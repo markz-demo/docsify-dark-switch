@@ -1,2 +1,1 @@
-* [首页](/)
-<!-- * [Changelog](en/changelog) -->
+* [快速开始](zh/)

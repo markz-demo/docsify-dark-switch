@@ -1,24 +1,25 @@
 {
   "name": "docsify-dark-switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A docsify plugin to switch dark and light theme",
   "main": "dist/docsify-dark-switch.min.js",
+  "unpkg": "dist/docsify-dark-switch.min.js",
+  "homepage": "https://github.com/markz-demo/docsify-dark-switch",
+  "repository": "git@github.com:markz-demo/docsify-dark-switch.git",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npm run build:css && npm run build:js",
     "build:js": "rollup --c",
     "build:css": "postcss src/index.css -o dist/docsify-dark-switch.css --config ./postcss.config.js"
   },
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "docsify",
     "docsify-plugin"
   ],
   "author": "markz",
   "license": "MIT",
-  "homepage": "https://github.com/markz-demo/docsify-dark-switch",
-  "repository": "git@github.com:markz-demo/docsify-dark-switch.git",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "autoprefixer": "^10.4.17",

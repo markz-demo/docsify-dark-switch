@@ -32,7 +32,9 @@
     var isDark = localStorage.getItem(key) === 'true';
 
     var config = {
-        get hasNav() { return !!window.$docsify.loadNavbar; },
+        get hasNav() {
+            return !!window.$docsify.loadNavbar || window.Docsify.dom.find('nav.app-nav');
+        },
         get hasBadge() { return !!window.$docsify.repo; },
         get debug() { return getConfig('debug') === true; },
         get fixed() { return getConfig('fixed') === true; },
@@ -96,16 +98,23 @@
 
         window.Docsify.dom.toggleClass(document.documentElement, isDark ? 'add' : 'remove', 'dark');
 
-        var lightSheet = window.Docsify.dom.find('[rel="stylesheet"][title="light"]');
-        var darkSheet = window.Docsify.dom.find('[rel="stylesheet"][title="dark"]');
-        if (!lightSheet || !darkSheet) {
-            !lightSheet && config.debug && console.warn('Can not found stylesheet named "light", please check the documentation.')
-            !darkSheet && config.debug && console.warn('Can not found stylesheet named "dark", please check the documentation.')
+        var lightSheets = window.Docsify.dom.findAll('[rel="stylesheet"][title="light"]');
+        var darkSheets = window.Docsify.dom.findAll('[rel="stylesheet"][title="dark"]');
+        if (lightSheets.length === 0) {
+            config.debug && console.warn('Can not found stylesheet with title equal to "light", please check the documentation.')
+            return;
+        }
+        if (darkSheets.length === 0) {
+            config.debug && console.warn('Can not found stylesheet with title equal to "dark", please check the documentation.')
             return;
         }
 
-        lightSheet.disabled = darkSheet.disabled = true;
-        (isDark ? darkSheet : lightSheet).disabled = false;
+        [...lightSheets, ...darkSheets].forEach(function (sheet) {
+            sheet.disabled = true;
+        });
+        (isDark ? darkSheets : lightSheets).forEach(function (sheet) {
+            sheet.disabled = false;
+        });
     }
     // toggle();
 

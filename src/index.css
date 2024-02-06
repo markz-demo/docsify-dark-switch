@@ -1,9 +1,14 @@
+/* overrides docsify style for plugin */
 .app-nav {
     margin-right: 120px !important;
 }
 
 .app-nav.no-badge {
     margin-right: 85px !important;
+}
+
+html.dark section.cover.show {
+    background: inherit !important;
 }
 
 .docsify-dark-switch {

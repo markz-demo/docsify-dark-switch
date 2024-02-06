@@ -1,2 +1,1 @@
-* [Home](/)
-<!-- * [Changelog](en/changelog) -->
+* [Quick start](quickstart)
