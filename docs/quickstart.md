@@ -32,6 +32,8 @@
 
 This example uses the `docsify` official theme. You can also reference the theme css file you want, and you need to set the corresponding `title`. When switching the theme, the plugin will automatically switch the theme css file based on the `title`.
 
+More `docsify` official themes: https://docsify.js.org/#/themes
+
 ### CDN
 
 If the cdn reference cannot be referenced, you can choose another cdn below, or download it to a local reference.
