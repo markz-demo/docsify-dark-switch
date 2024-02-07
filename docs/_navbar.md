@@ -1,2 +1,2 @@
-* [English](/readme)
+* [English](/README)
 * [中文](zh/)

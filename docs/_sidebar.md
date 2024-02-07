@@ -1,1 +1,1 @@
-* [Quick start](/readme)
+* [Quick start](/README)
