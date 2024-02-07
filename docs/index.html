@@ -25,6 +25,7 @@
       repo: 'https://github.com/markz-demo/docsify-dark-switch',
 
       coverpage: true,
+      onlyCover: true,
       loadNavbar: true,
       loadSidebar: true,
       alias: {
@@ -35,6 +36,16 @@
         debug: true,
         fixed: true,
       },
+
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(html => {
+            var url = 'https://github.com/markz-demo/docsify-dark-switch/blob/main/docs/' + vm.route.file;
+            const editHtml = '[:memo: Edit Document](' + url + ')\n';
+            return editHtml + html;
+          });
+        },
+      ],
     }
   </script>
   <!-- Docsify v4 -->
